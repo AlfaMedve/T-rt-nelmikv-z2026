@@ -1,3 +1,5 @@
+let valaszJo=0
+let valaszOsszes=0
 let elozo=-1
 let sz=""
 let sorszam=0
@@ -46,15 +48,35 @@ function nagyit(szam){
     let gombok=""
     for (let i = 0; i < 4; i++) {
         gombok+=`
-        <button onclick="ertekel('${szavakTomb[i]}')">${szavakTomb[i]}</button>
+        <button onclick="ertekel('${szavakTomb[i]}',${szam})">${szavakTomb[i]}</button>
         `
         
     }
     document.getElementById("gombokHelye").innerHTML=gombok
 }
 
-function ertekel(szemely){
-    alert(szemely)
+function ertekel(szemely,szam){
+    //alert(szemely)
+    //alert(szam)
+    valaszOsszes+=1
+    if(szemely==nevekTomb[szam].megoldas)
+    {
+        Swal.fire(
+            'Siker!',
+            'Az adatok elmentve.',
+            'success'
+          );
+        valaszJo+=1
+    }
+    else
+    {
+        Swal.fire(
+            'Rossz!',
+            'Az adatok elmentve.',
+            'error'
+          );
+    }
+    document.getElementById("valasz").innerHTML=`Eredmény: ${valaszJo} jó válasz ${valaszOsszes} kérdésből. Százalékos eredmény: ${Math.round(valaszJo/valaszOsszes*100)}%`
 }
 
 function szegelyRajzol(szam){

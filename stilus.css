@@ -1,27 +1,27 @@
-.kisKep{
-    width: 80px;
-}
-#kepekHelye{
-    text-align: center;
-    margin-top: 30px;
-}
-h1{
-    text-align: center;
-}
+    .kisKep{
+        width: 80px;
+    }
+    #kepekHelye{
+        text-align: center;
+        margin-top: 30px;
+    }
+    h1{
+        text-align: center;
+    }
 
-#nagyKep{
-    margin-top: 30px;
-    text-align: center;
- 
-}
+    #nagyKep{
+        margin-top: 30px;
+        text-align: center;
+    
+    }
 
-#gombokHelye{
-    margin-top: 30px;
-    text-align: center;
-}
+    #gombokHelye{
+        margin-top: 30px;
+        text-align: center;
+    }
 
-#kerdes{
-    text-align: center;
-    margin-top: 20px;
-    font-weight: bold;
-}
+    #kerdes{
+        text-align: center;
+        margin-top: 20px;
+        font-weight: bold;
+    }
